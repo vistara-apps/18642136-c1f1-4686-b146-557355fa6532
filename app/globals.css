@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SlotSync Theme - Vibrant booking app colors */
+    --color-bg: hsl(220, 20%, 97%);
+    --color-fg: hsl(222, 47%, 11%);
+    --color-accent: hsl(340, 82%, 62%);
+    --color-border: hsl(220, 13%, 91%);
+    --color-surface: hsl(0, 0%, 100%);
+    --color-muted: hsl(215, 16%, 47%);
+    --color-success: hsl(142, 76%, 45%);
+    --color-warning: hsl(38, 92%, 50%);
+    --color-error: hsl(0, 84%, 60%);
+    --color-primary: hsl(220, 90%, 56%);
+    --color-primary-hover: hsl(220, 90%, 48%);
+    --color-slot-available: hsl(142, 76%, 92%);
+    --color-slot-booked: hsl(220, 90%, 95%);
+    --color-slot-prime: hsl(43, 100%, 95%);
+  }
+
+  [data-theme="celo"] {
+    --color-bg: hsl(0, 0%, 0%);
+    --color-fg: hsl(0, 0%, 100%);
+    --color-accent: hsl(45, 98%, 68%);
+    --color-border: hsl(0, 0%, 20%);
+    --color-surface: hsl(0, 0%, 8%);
+    --color-muted: hsl(0, 0%, 60%);
+    --color-success: hsl(142, 76%, 45%);
+    --color-warning: hsl(38, 92%, 50%);
+    --color-error: hsl(0, 84%, 60%);
+    --color-primary: hsl(45, 98%, 68%);
+    --color-primary-hover: hsl(45, 98%, 58%);
+    --color-slot-available: hsl(142, 76%, 20%);
+    --color-slot-booked: hsl(220, 90%, 20%);
+    --color-slot-prime: hsl(43, 100%, 20%);
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-bg text-fg;
+    font-family: system-ui, -apple-system, 'Inter', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface rounded-lg shadow-card backdrop-blur-sm;
+    background: hsla(0, 0%, 100%, 0.7);
+    border: 1px solid;
+    border-color: rgb(220 220 220 / 0.3);
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-hover transition-all duration-200 shadow-button;
+  }
+
+  .btn-success {
+    @apply bg-success text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-fg px-6 py-3 rounded-lg font-medium border-2 border-border hover:bg-surface transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-error text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-200;
+  }
+
+  .slot-card {
+    @apply p-4 rounded-md transition-all duration-200 cursor-pointer;
+    min-height: 80px;
+  }
+
+  .slot-available {
+    @apply slot-card bg-slot-available border-2 border-success hover:shadow-card;
+  }
+
+  .slot-booked {
+    @apply slot-card bg-slot-booked border-2 border-primary;
+  }
+
+  .slot-prime {
+    @apply slot-card bg-slot-prime border-2 border-warning;
+  }
+
+  .slot-mine {
+    @apply slot-card border-2 border-accent;
+    background: linear-gradient(135deg, hsl(340, 82%, 95%), hsl(340, 82%, 92%));
+  }
+
+  @keyframes confetti {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+  }
+
+  .confetti {
+    animation: confetti 2s ease-out forwards;
+  }
+}
