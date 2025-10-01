@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "SlotSync",
+    "subtitle": "Built with Zara",
+    "description": "SlotSync is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://18642136c1f14686b146557355fa6532-lgmp.vercel.app",
+    "splashImageUrl": "https://18642136c1f14686b146557355fa6532-lgmp.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://18642136c1f14686b146557355fa6532-lgmp.vercel.app/image.png",
+    "tagline": "SlotSync",
+    "screenshotUrls": [
+      "https://18642136c1f14686b146557355fa6532-lgmp.vercel.app/screenshot.png",
+      "https://18642136c1f14686b146557355fa6532-lgmp.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://18642136c1f14686b146557355fa6532-lgmp.vercel.app/api/webhook"
+  }
+}
